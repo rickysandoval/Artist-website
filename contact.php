@@ -1,77 +1,74 @@
 <!doctype html>
-
 <html>
-
 <head>
+
 <meta charset="utf-8">
 
-<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-
+<meta name="viewport" content="width=device-width; initial-scale=1.0">
 <meta name="description" content="Charoal Portait Drawings By Ricky Sandoval">
-<meta name="keywords" content="Drawing,Art,Charcoal,Portaits,Artist,Contact,Ricky,Sandoval">
+<meta name="keywords" content="Drawing,Art,Charcoal,Portaits,Artist,Ricky,Sandoval">
 <meta name="author" content="Ricky Sandoval">
 
-<meta name="viewport" content="width=device-width; initial-scale=1.0">
+<title>Ricky Sanoval Drawing - Contact</title>
 
-<title>Ricky Sandoval Drawing - Contact</title>
+<link rel="stylesheet" href="assets/styles/reset.css">
+<link rel="stylesheet" href="assets/styles/main2.css">
+<link rel="stylesheet" href="assets/styles/responsive.css">
+<script src="assets/js/jquery.js"></script>
 
-<link href="inc/main2.css" rel="stylesheet" type="text/css">
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<!--[if lt IE 9]>
+<script src="assets/js/html5shiv.min.js"></script>
+<![endif]-->
 
-<style>
-#contact_temp{
-	text-align: center;
-	margin: 0px auto 0px;
-	padding: 150px 20px 150px 20px;
-	font-size: 24px;
-	color: #959595;
-	text-shadow: 1px 1px #999999;
-}
-
-#email {
-	color: #606060;
-}
-
-</style>
+<script>
+$(document).ready(function(){
+		$('body').css('display', 'none');
+        $('body').fadeIn(500);
+ });
+</script>
 
 </head>
 
 <body id="contact_page">
 
-<?php include 'inc/header2.php' ?>
+<?php include 'inc/_header.php' ?>
 
-<main>
+<div role="main">
+	<header>
+		<h1>Contact</h1>
+	</header>
+<?php
 
-	<header class="section_header">
+$form = '<form name="contact" action="contact.php" method="post">
+	Name<br><input type="text" name="name" required></input><br>
+	Subject<br><input type="text" name="subject"></input><br>
+	Message<br><textarea rows="10" name="message" required></textarea><br>
+	Email<br><input type="email" name="email" required></input><br>
+	<input id="submit" type="submit" name="submit" value="Submit"></input>
+</form>';
 
-	<h1 id="about_h1">Contact</h1> 
+if (isset($_POST['submit'])) {
+	$name = $_POST['name'];
+	$subject = $_POST['subject'];
+	$body = $_POST['message'];
+	$email = $_POST['email'];
 
-    </header>
+	$to = 'ras482@cornell.edu';
 
-    <div class="content" >
+	if (mail($to, $subject, $body . "\n\n" . $name . ": " . $email)){
+		echo '<p class="email">Your message was sent successfully.</p>';
+	} else {
+		echo'<p class="email">Oops, something went wrong. Try that again.</p>';
+		echo $form;
+	}
 
-	<div id="contact_temp">
+} else {
+	echo $form;
+}
 
-	<p>
-		Page under construction. In the meantime, you can find me at:
-	</p>
-
-	<p id="email">
-		ras482@cornell.edu
-	<p>
-
-	</div>
-	<div>
-
-</main>
-
-	<footer>
-
-	<?php include 'inc/footer.php' ?>
-
-	</footer>
-
+?>
 </div>
+<?php include 'inc/_footer.php' ?>
 </body>
 </html>
 

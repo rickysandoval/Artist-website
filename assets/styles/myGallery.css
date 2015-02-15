@@ -1,0 +1,22 @@
+.gallery-list{
+	list-style-type: none;
+	height: 100%;
+}
+.gallery-picture{
+	display: none;
+	height: 100%;
+}
+.gallery-picture img{
+	max-height: 100%;
+	display: none;
+}
+.gallery-picture div{
+	display: none;
+}
+.gallery-picture.shown{
+	display: block;
+}
+
+.gallery-info{
+
+}

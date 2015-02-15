@@ -1,0 +1,376 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:600,300);
+
+/* ===================== Fonts ================================ */
+@font-face{
+	font-family: 'Cinzel-Regular';
+	src: url('cinzel/Cinzel-Regular.eot)');
+	src: url('cinzel/Cinzel-Regular.eot?#iefix') format('embedded-opentype'),
+		 url('cinzel/Cinzel-Regular.woff') format('woff'),
+		 url('cinzel/Cinzel-Regular.ttf') format('truetype');
+}
+
+/* =====================Document Standards===================== */
+
+html, body {
+	min-height: 100vh;
+	width: 100%;
+	font: 14px 'Open Sans', sans-serif;
+	font-weight: 300;
+	background: white;
+}
+
+div[role=main]{
+	padding-top: 50px;
+	text-align: center;
+	margin-bottom: 50px;
+}
+div[role=main] > header {
+	margin-bottom: 25px;
+}
+div[role=main] > header h1{
+	font-family: 'Cinzel-Regular', serif;
+	font-size: 1.75em;
+	letter-spacing: 2px;
+	color: #606060;
+	width: 50%;
+	max-width: 450px;
+	margin: 0 auto;
+	padding: 0 0 5px 0;
+	border-bottom: 1px solid #606060;
+	
+}
+
+div[role=main] p {
+	width: 50%;
+	max-width: 450px;
+	margin: 0 auto 15px;
+	font-size: 1.1em;
+	line-height: 1.5em;
+	color: #303030;
+}
+
+div[role=main] p a{
+	color: inherit;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+
+/* ========================Header=============================== */
+body > header h1 {
+	font-family: 'Cinzel-Regular', Serif;
+	font-size: 2em;
+	line-height: 34px;
+	display: inline-block;
+	color: #505050;
+	padding-left: 25px;
+}
+body > header {
+	text-align: left;
+	background: rgba(235,235,235,.75);
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 100;
+}
+nav.main {
+	float: right;
+	text-align: right;
+	text-transform: uppercase;
+}
+
+nav.main ul {
+	list-style-type: none;
+}
+
+nav.main ul li {
+	display: inline-block;
+	padding: 0 5px;
+}
+
+nav.main ul li a {
+	display: block;
+	padding: 8px 25px;
+	height: 18px;
+	border-bottom: 1px solid rgba(235,235,235,.75);
+
+	color: #606060;
+	font: 1.2em 'Cinzel-Regular', sans-serif;
+	letter-spacing: 2px;
+	text-decoration: none;
+
+	-webkit-transition: border-bottom 1s,
+						 color .5s;
+	transition: border-bottom 1s,
+				color .5s;
+}
+
+nav.main ul li a:hover {
+	border-bottom: 1px solid #606060;
+	color: #1a1a1a;
+
+}
+
+/* ======================Footer=========================== */
+
+footer {
+	width: 100%;
+	height: 22px;
+	padding: 6px 0;
+	position: fixed;
+	bottom: 0px;
+
+	color: #787878;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+}
+#cc img{
+	height: 22px;
+	opacity: .5;
+}
+footer #cc a{
+	margin-left: 6px;
+}
+
+#licensing {
+	display: none;
+	vertical-align: 6px;
+}
+#show_info img{
+	visibility: hidden;
+}
+
+
+/* =====================Home Page========================= */
+
+#home_page > h1 {
+	display: none;
+}
+
+#home_page main {
+	position: absolute;
+	top: 100px;
+	bottom: 100px;
+	max-height: 600px;
+	width: 100%;
+	overflow: hidden;
+	background: url('../../photos/general/home_background.jpg') repeat;
+
+	box-shadow: inset 0px 10px 20px -10px rgba(0, 0, 0, 0.55), 
+				inset 0px -10px 20px -10px rgba(0, 0, 0, 0.55);			
+	display: none;
+}
+
+#home_page div.white_cover {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	z-index: 100;
+
+	background: -moz-linear-gradient(left, rgba(222,222,222,0.75) 0%, rgba(207,207,207,0.6) 50%, rgba(222,222,222,0.75) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(222,222,222,0.75)), color-stop(50%, rgba(207,207,207,0.6)), color-stop(100%, rgba(222,222,222,0.75)));
+	background: -webkit-linear-gradient(left, rgba(222,222,222,0.75) 0%, rgba(207,207,207,0.6) 50%, rgba(222,222,222,0.75) 100%);
+	background: -o-linear-gradient(left, rgba(222,222,222,0.75) 0%, rgba(207,207,207,0.6) 50%, rgba(222,222,222,0.75) 100%);
+	background: -ms-linear-gradient(left, rgba(222,222,222,0.75) 0%, rgba(207,207,207,0.6) 50%, rgba(222,222,222,0.75) 100%);
+	background: linear-gradient(to right, rgba(222,222,222,0.75) 0%, rgba(207,207,207,0.6) 50%, rgba(222,222,222,0.75) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dedede', endColorstr='#dedede', GradientType=1 );
+
+	
+	display: none;
+}
+
+#home_page nav {
+	position: absolute;
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+	padding: 5px 0 15px 0;
+	bottom: 0px;
+	z-index: 300;
+	left: 0px;
+	background: rgba(230,230,230,.5);
+}
+
+#home_page nav h1{
+	font-size: 3.5em;
+	font-family: 'Cinzel-Regular';
+	color: rgba(20,20,20,.9);
+	text-shadow: 1px 1px 0 rgba(200, 200, 200, .75);
+	margin-bottom: 10px;
+}
+
+#home_page nav ul {
+	position: relative;
+	margin: 0px auto 0px;
+	display: inline-block;
+	list-style-type: none;
+	display: none;
+}
+
+#home_page nav ul li {
+	display: inline;
+	text-align: center;
+	border-right: 1px solid #303030;
+}
+
+#home_page nav ul li:last-child {
+	border-right: none;
+}
+
+#home_page nav ul li a {
+	color: #303030;
+	font-family: 'Cinzel-Regular', serif;
+	font-size: 1.5em;
+	position: relative;
+	letter-spacing: 2px;
+	text-decoration: none;
+	z-index: 300;
+	width: 100px;
+	padding: 10px 20px;
+	transition: color .5s;
+}
+
+#home_page nav ul li a:hover {
+	color: black;
+}
+
+
+/* ===================Gallery Page======================== */
+#gallery {
+	background: #0f0f0f;
+}
+#gallery header{
+	background: black;
+	border-bottom: 1px solid rgba(230,230,230,.5);
+}
+#gallery header h1{
+	color: #8A8A8A;
+}
+#gallery header nav.main a{
+	border-bottom: none;
+	color: #8A8A8A;
+	transition: color .5s;
+}
+#gallery header nav.main a:hover{
+	color: #e0e0e0;
+}
+#gallery footer{
+	border-top: 1px solid rgba(230,230,230,.5);
+	background:black;
+}
+#gallery footer a{
+	opacity: .5;
+}
+#gallery main {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #1b1b1b;
+}
+
+#photo_container {
+	position: absolute;
+	right: 0;
+	z-index: 0;
+	height: 100vh;
+	padding: 35px 0 34px 0;
+	box-sizing: border-box;
+	width: 66%;
+	text-align: center;
+}
+#controls {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 66%;
+	text-align: center;
+}
+#controls img {
+	padding: 0 25px;
+}
+#more_info{
+	height: 34px;
+	margin-bottom: -4px;
+}
+#controls img.arrow {
+	height: 25px;
+	opacity: .75;
+}
+
+#photo_container img {
+	max-height: 100%;
+	height: 100vh;
+	width: auto;
+}
+#info_container{
+	text-align: center;
+	width: 33%;
+	position: absolute;
+	top: 15%;
+	left: 0;
+}
+#info_container h1 {
+	color: #838383;
+	font-size: 1.6em;
+	margin-bottom: 10px;
+}
+#info_container p {
+	position: relative;
+	width: 200px;
+	font-size: 1.1em;
+	color: #838383;
+	margin: auto;
+}
+#info_container a {
+	text-decoration: none;
+	color: #a8a8a8;
+	transition: color .5s;
+}
+#info_container a:hover{
+	color: white;
+}
+
+/* ======================About Page========================== */
+
+#about {
+	display: block;
+	margin: 0px auto;
+	width: 50%;
+	max-width: 450px;
+	border-bottom: 1px solid #606060;
+;
+}
+
+/* ====================== Contact-page========================== */
+form {
+	font-size: 1em;
+	width: 33%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+form input, form textarea {
+	width: 75%;
+	margin: 0 0 5px 0;
+	font-family: 'Open Sans', sans-serif;
+	padding: 0px;
+	border: 1px solid rgb(175,175,175);
+}
+form textarea{
+	resize: vertical;
+}
+
+form #submit{
+	width: 25%;
+	margin: 25px 0;
+	border-radius: none;
+	border: 1px solid #808080;
+	background: rgba(230,230,230, .5);
+	transition: opacity .5s;
+}
+
+form #submit:hover{
+	opacity: .5;
+}
+
+
